@@ -1,0 +1,18 @@
+{
+  "name": "mesh-socket",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "server:start": "cd server && PORT=4001 yarn start",
+    "mesh:start": "sleep 5s && yarn mesh dev",
+    "client:start": "cd client && sleep 5s && yarn dev",
+    "start": "concurrently yarn:server:start yarn:mesh:start yarn:client:start"
+  },
+  "dependencies": {
+    "@graphql-mesh/cli": "^0.73.1",
+    "@graphql-mesh/graphql": "^0.27.0",
+    "concurrently": "^7.2.1",
+    "graphql": "^16.5.0"
+  }
+}

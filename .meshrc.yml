@@ -1,0 +1,13 @@
+sources:
+  - name: first
+    handler:
+      # ^0.20.6 vs ^0.27.0
+      graphql:
+        endpoint: http://localhost:4001/graphql
+        operationHeaders:
+          token: "{context.headers.token}"
+
+serve:
+  hostname: "0.0.0.0"
+  browser: false
+  playground: true
